@@ -66,6 +66,8 @@ const data = reactive({
   completed: {},
 });
 
+//The getall function allows you to obtain all the currency information provided by the API. 
+
 const getall = async () => {
   const res = await fetch(
     `https://openexchangerates.org/api/latest.json?app_id=${id}`

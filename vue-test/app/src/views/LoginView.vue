@@ -34,6 +34,8 @@ const data = reactive({
 
 const router = useRouter();
 
+//the login function allows us to obtain our token and then redirect us to our currency converter
+
 const login = async () => {
   let datalogin = {
     email: data.email,
@@ -51,6 +53,9 @@ const login = async () => {
       data.span = false;
     }, 2000);
   } else {
+
+  //our token is stored in localstorage and then retrieved by our state handler 
+     
     localStorage.setItem("token", da.accessToken);
     store.auth = da.accessToken;
     router.push("/convertion");
